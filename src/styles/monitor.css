@@ -1,0 +1,777 @@
+
+/* =========================================
+   SMARTSHELL — LIVE MONITOR
+   PHASE 1.2
+========================================= */
+
+.monitor-page {
+  min-width: 0;
+}
+
+.monitor-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.monitor-heading h1 {
+  margin: 12px 0 8px;
+}
+
+.monitor-heading p {
+  color: #8fa4b7;
+  font-size: 14px;
+}
+
+.monitor-demo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  background: rgba(20, 184, 166, 0.08);
+  border-radius: 10px;
+  color: #14b8a6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+}
+
+/* Device strip */
+
+.monitor-device-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 22px;
+  border: 1px solid #1f303b;
+  border-radius: 16px;
+  background: linear-gradient(
+    110deg,
+    #121e27,
+    #111b23
+  );
+}
+
+.monitor-device-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.monitor-device-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(20, 184, 166, 0.18);
+  border-radius: 13px;
+  background: rgba(20, 184, 166, 0.1);
+  color: #14b8a6;
+}
+
+.monitor-device-label {
+  color: #637b8d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.monitor-device-main h3 {
+  color: #e6edf5;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.monitor-device-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.monitor-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #8da2b5;
+  font-size: 12px;
+}
+
+.monitor-disconnected {
+  color: #e8a45b;
+}
+
+/* Main reading panel */
+
+.live-reading-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 25px;
+  border: 1px solid rgba(20, 184, 166, 0.18);
+  border-radius: 18px;
+  background:
+    radial-gradient(
+      ellipse at 80% 10%,
+      rgba(20, 184, 166, 0.09),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #14232c,
+      #101a23 70%
+    );
+  margin-bottom: 22px;
+}
+
+.live-reading-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.live-reading-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.live-reading-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(20, 184, 166, 0.1);
+  color: #14b8a6;
+}
+
+.live-reading-label {
+  color: #91a7b8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.live-reading-heading p {
+  color: #617b8e;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.reading-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  border-radius: 9px;
+  background: rgba(245, 158, 11, 0.06);
+  color: #f4b44b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.reading-status-pill > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f4b44b;
+}
+
+.live-reading-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 30px 0;
+}
+
+.temperature-display {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.temperature-number {
+  color: #e8f3f8;
+  font-size: clamp(55px, 8vw, 88px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.temperature-unit {
+  color: #14b8a6;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.reading-description {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 310px;
+  padding: 15px;
+  border: 1px solid #253640;
+  border-radius: 13px;
+  background: rgba(9, 17, 23, 0.4);
+}
+
+.reading-description-icon {
+  color: #14b8a6;
+}
+
+.reading-description strong {
+  color: #cbd7e2;
+  font-size: 12px;
+}
+
+.reading-description p {
+  color: #75899b;
+  font-size: 11px;
+  line-height: 1.7;
+  margin-top: 5px;
+}
+
+.live-reading-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #253640;
+  padding-top: 20px;
+  gap: 18px;
+}
+
+.reading-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.reading-detail > span {
+  color: #71879a;
+  font-size: 11px;
+}
+
+.reading-detail strong {
+  color: #d4e0e9;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.reading-detail .reading-offline {
+  color: #e8a45b;
+}
+
+/* Status grid */
+
+.monitor-status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.monitor-status-card {
+  padding: 20px;
+  border: 1px solid #202f39;
+  border-radius: 15px;
+  background: #121d26;
+  min-width: 0;
+}
+
+.monitor-status-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.monitor-status-top > span {
+  color: #91a6b9;
+  font-size: 12px;
+}
+
+.monitor-status-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.monitor-amber {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f5b544;
+}
+
+.monitor-blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+}
+
+.monitor-purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: #a78bfa;
+}
+
+.monitor-teal {
+  background: rgba(20, 184, 166, 0.1);
+  color: #14b8a6;
+}
+
+.monitor-status-card h3 {
+  margin: 18px 0 8px;
+  color: #e3edf5;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.monitor-status-card p {
+  color: #71879b;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Trend chart */
+
+.monitor-chart-panel {
+  padding: 22px;
+  margin-bottom: 22px;
+  min-width: 0;
+}
+
+.monitor-chart-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.monitor-chart-header h3 {
+  color: #e2edf5;
+  font-size: 16px;
+}
+
+.monitor-chart-header p {
+  color: #8298ac;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.monitor-chart-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chart-range-selector {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px;
+  border: 1px solid #263540;
+  border-radius: 10px;
+  background: #0d171f;
+}
+
+.chart-range-selector button {
+  border: none;
+  background: transparent;
+  color: #8497a8;
+  padding: 8px 11px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.chart-range-selector button:hover {
+  color: #e5edf5;
+  background: #192630;
+}
+
+.chart-range-selector button.range-active {
+  background: rgba(20, 184, 166, 0.13);
+  color: #14b8a6;
+}
+
+.monitor-chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.legend-temp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9cb0c0;
+  font-size: 11px;
+}
+
+.legend-temp > span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #14b8a6;
+}
+
+.chart-legend-note {
+  color: #607789;
+  font-size: 10px;
+}
+
+.monitor-chart-container {
+  width: 100%;
+  height: 300px;
+  margin-top: 16px;
+}
+
+.chart-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid rgba(245, 158, 11, 0.12);
+  border-radius: 10px;
+  background: rgba(245, 158, 11, 0.04);
+  color: #a98b5b;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.chart-disclaimer svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Threshold framework */
+
+.threshold-panel {
+  padding: 22px;
+  margin-bottom: 22px;
+}
+
+.threshold-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #14b8a6;
+  background: rgba(20, 184, 166, 0.1);
+}
+
+.threshold-zones {
+  margin-top: 20px;
+}
+
+.threshold-zone {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 0;
+  border-bottom: 1px solid #22323d;
+}
+
+.threshold-zone:last-child {
+  border-bottom: none;
+}
+
+.threshold-color {
+  width: 4px;
+  height: 40px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.threshold-normal {
+  background: #14b8a6;
+}
+
+.threshold-warning {
+  background: #f59e0b;
+}
+
+.threshold-critical {
+  background: #ef4444;
+}
+
+.threshold-zone-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.threshold-zone-info strong {
+  color: #dce6ef;
+  font-size: 13px;
+}
+
+.threshold-zone-info span {
+  color: #7d93a5;
+  font-size: 11px;
+}
+
+.threshold-zone-tag {
+  color: #71879a;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.threshold-note {
+  padding: 14px;
+  border: 1px solid #23323d;
+  border-radius: 10px;
+  background: #0e1820;
+  color: #75899b;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* Historical table */
+
+.monitor-history-panel {
+  padding: 22px;
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+
+.monitor-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.monitor-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+
+.monitor-table th {
+  padding: 14px 12px;
+  text-align: left;
+  color: #73889b;
+  background: #0e1820;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.monitor-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #202f39;
+  color: #91a5b6;
+  font-size: 12px;
+}
+
+.monitor-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-device {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #9db0c1;
+}
+
+.table-temp {
+  color: #dce9f2;
+  font-weight: 650;
+}
+
+.table-source {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  border: 1px solid #293844;
+  border-radius: 7px;
+  color: #8fa4b6;
+  background: #101a23;
+  font-size: 10px;
+}
+
+.table-validation {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #e2a74f;
+  font-size: 11px;
+}
+
+.table-validation > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e2a74f;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1100px) {
+  .monitor-status-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .monitor-device-strip {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .monitor-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .monitor-demo-badge {
+    align-self: flex-start;
+  }
+
+  .monitor-device-strip {
+    flex-direction: column;
+    gap: 18px;
+    padding: 17px;
+  }
+
+  .monitor-device-meta {
+    gap: 12px;
+  }
+
+  .live-reading-panel {
+    padding: 18px;
+  }
+
+  .live-reading-top {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .live-reading-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 28px 0;
+  }
+
+  .temperature-number {
+    font-size: 64px;
+  }
+
+  .reading-description {
+    max-width: none;
+    width: 100%;
+  }
+
+  .live-reading-bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .monitor-status-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .monitor-status-card {
+    padding: 16px;
+  }
+
+  .monitor-chart-panel,
+  .threshold-panel,
+  .monitor-history-panel {
+    padding: 17px;
+  }
+
+  .monitor-chart-container {
+    height: 260px;
+  }
+
+  .monitor-chart-header {
+    flex-direction: column;
+  }
+
+  .monitor-chart-tools {
+    width: 100%;
+  }
+
+  .chart-range-selector {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .chart-range-selector button {
+    flex: 1;
+    padding: 8px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .monitor-status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .monitor-status-card {
+    padding: 18px;
+  }
+
+  .temperature-number {
+    font-size: 56px;
+    letter-spacing: -2px;
+  }
+
+  .temperature-unit {
+    font-size: 20px;
+  }
+
+  .live-reading-bottom {
+    gap: 18px 12px;
+  }
+
+  .monitor-device-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .threshold-zone {
+    gap: 10px;
+  }
+
+  .threshold-zone-tag {
+    font-size: 9px;
+  }
+
+  .threshold-zone-info span {
+    line-height: 1.6;
+  }
+
+  .monitor-chart-container {
+    height: 230px;
+  }
+}

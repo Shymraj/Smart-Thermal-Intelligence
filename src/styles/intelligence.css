@@ -1,0 +1,643 @@
+
+/* =========================================
+   SMARTSHELL - AI INTELLIGENCE
+========================================= */
+
+.intel-page {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 2px 30px;
+  color: #e2e8f0;
+  font-family: inherit;
+}
+
+.intel-page *,
+.intel-page *::before,
+.intel-page *::after {
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.intel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.intel-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #14b8a6;
+}
+
+.intel-header h1 {
+  margin: 10px 0 8px;
+  color: #f1f5f9;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.intel-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.intel-demo-tag {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 15px;
+  border: 1px solid rgba(20, 184, 166, 0.22);
+  border-radius: 12px;
+  background: rgba(20, 184, 166, 0.08);
+  color: #2dd4bf;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ENGINE BANNER */
+
+.intel-engine-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 19px 22px;
+  margin-bottom: 24px;
+  background: #111923;
+  border: 1px solid #243140;
+  border-radius: 18px;
+}
+
+.intel-engine-main {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.intel-engine-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #2dd4bf;
+  background: rgba(20, 184, 166, 0.12);
+  border: 1px solid rgba(20, 184, 166, 0.18);
+  border-radius: 15px;
+}
+
+.intel-engine-main h3 {
+  margin: 0 0 5px;
+  color: #e2e8f0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.intel-engine-main p {
+  margin: 0;
+  color: #8495a9;
+  font-size: 13px;
+}
+
+.intel-engine-state {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.intel-state-dot {
+  width: 8px;
+  height: 8px;
+  background: #14b8a6;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(20, 184, 166, 0.35);
+}
+
+/* METRIC CARDS */
+
+.intel-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.intel-metric-card {
+  min-width: 0;
+  min-height: 172px;
+  padding: 21px 22px;
+  background: #111923;
+  border: 1px solid #243140;
+  border-radius: 18px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.intel-metric-card:hover {
+  transform: translateY(-3px);
+  border-color: #334155;
+}
+
+.intel-metric-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.intel-metric-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #1c2734;
+  color: #94a3b8;
+}
+
+.intel-metric-card h3 {
+  margin: 22px 0 0;
+  color: #f1f5f9;
+  font-size: 26px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.intel-metric-card > p {
+  margin: 12px 0 0;
+  color: #8495a9;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ACCENT COLORS */
+
+.intel-icon-green {
+  color: #2dd4bf;
+  background: rgba(20, 184, 166, 0.12);
+}
+
+.intel-icon-orange {
+  color: #fb923c;
+  background: rgba(249, 115, 22, 0.12);
+}
+
+.intel-icon-blue {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.intel-icon-purple {
+  color: #a78bfa;
+  background: rgba(139, 92, 246, 0.12);
+}
+
+/* PANEL */
+
+.intel-panel {
+  padding: 23px;
+  margin-bottom: 24px;
+  background: #111923;
+  border: 1px solid #243140;
+  border-radius: 19px;
+  min-width: 0;
+}
+
+.intel-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.intel-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.intel-panel-title svg {
+  flex-shrink: 0;
+  color: #14b8a6;
+}
+
+.intel-panel-title h2 {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.intel-panel-header > div > p {
+  margin: 8px 0 0;
+  color: #8495a9;
+  font-size: 13px;
+}
+
+/* CHART */
+
+.intel-chart-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.intel-chart-label > span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #14b8a6;
+}
+
+.intel-chart {
+  width: 100%;
+  height: 330px;
+}
+
+.intel-chart .recharts-cartesian-grid-horizontal line,
+.intel-chart .recharts-cartesian-grid-vertical line {
+  stroke: #263443;
+  stroke-dasharray: 4 4;
+}
+
+.intel-chart .recharts-cartesian-axis-line,
+.intel-chart .recharts-cartesian-axis-tick line {
+  stroke: #334155;
+}
+
+.intel-chart .recharts-cartesian-axis-tick text {
+  fill: #94a3b8;
+}
+
+.intel-chart .recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.intel-chart-footnote {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid #243140;
+  background: #17212c;
+  border-radius: 11px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.intel-chart-footnote svg {
+  color: #14b8a6;
+  flex-shrink: 0;
+}
+
+/* ANALYSIS GRID */
+
+.intel-analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.intel-analysis-grid .intel-panel {
+  margin-bottom: 24px;
+}
+
+/* DETECTION */
+
+.intel-detection-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 17px;
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: 14px;
+}
+
+.intel-detection-status-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: rgba(249, 115, 22, 0.14);
+  color: #fb923c;
+}
+
+.intel-detection-status h3 {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.intel-detection-status p {
+  margin: 7px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.intel-rule-card {
+  padding: 16px;
+  margin-top: 17px;
+  background: #17212c;
+  border: 1px solid #243140;
+  border-radius: 13px;
+}
+
+.intel-rule-card span {
+  display: block;
+  color: #14b8a6;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.intel-rule-card strong {
+  display: block;
+  margin-top: 12px;
+  color: #e2e8f0;
+  font-size: 15px;
+}
+
+.intel-rule-card p {
+  margin: 8px 0 0;
+  color: #8495a9;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.intel-detection-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.intel-detection-footer svg {
+  flex-shrink: 0;
+  color: #14b8a6;
+}
+
+/* INSIGHTS */
+
+.intel-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 16px 0;
+  border-bottom: 1px solid #243140;
+}
+
+.intel-insight-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.intel-insight h3 {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.intel-insight p {
+  margin: 7px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.intel-insight-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px;
+  background: #17212c;
+  border: 1px solid #243140;
+  border-radius: 12px;
+}
+
+.intel-insight-disclaimer svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #14b8a6;
+}
+
+.intel-insight-disclaimer p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* MODULE SELECTOR */
+
+.intel-mode-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.intel-mode-selector button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  appearance: none;
+  border: 1px solid #293747;
+  outline: none;
+  background: #17212c;
+  color: #94a3b8;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.intel-mode-selector button:hover {
+  border-color: #14b8a6;
+  color: #2dd4bf;
+}
+
+.intel-mode-selector button.intel-mode-active {
+  background: rgba(20, 184, 166, 0.12);
+  color: #2dd4bf;
+  border-color: rgba(20, 184, 166, 0.35);
+}
+
+.intel-mode-content {
+  padding: 18px;
+  border: 1px solid #243140;
+  border-radius: 13px;
+  background: #17212c;
+}
+
+.intel-mode-content h3 {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.intel-mode-content p {
+  margin: 10px 0 0;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* DISCLAIMER */
+
+.intel-global-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 17px;
+  border: 1px solid rgba(245, 158, 11, 0.18);
+  background: rgba(245, 158, 11, 0.06);
+  border-radius: 13px;
+}
+
+.intel-global-disclaimer > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #f59e0b;
+}
+
+.intel-global-disclaimer p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.intel-global-disclaimer strong {
+  color: #fbbf24;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .intel-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .intel-analysis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .intel-page {
+    padding: 5px 0 24px;
+  }
+
+  .intel-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .intel-header h1 {
+    font-size: 25px;
+  }
+
+  .intel-engine-banner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 17px;
+  }
+
+  .intel-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .intel-metric-card {
+    padding: 16px;
+    min-height: 155px;
+  }
+
+  .intel-metric-card h3 {
+    font-size: 22px;
+    margin-top: 18px;
+  }
+
+  .intel-panel {
+    padding: 17px;
+  }
+
+  .intel-chart {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intel-header h1 {
+    font-size: 22px;
+  }
+
+  .intel-header p {
+    font-size: 13px;
+  }
+
+  .intel-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intel-metric-card {
+    min-height: auto;
+  }
+
+  .intel-panel-title h2 {
+    font-size: 16px;
+  }
+
+  .intel-chart {
+    height: 240px;
+  }
+
+  .intel-mode-selector button {
+    padding: 9px 11px;
+    font-size: 11px;
+  }
+
+  .intel-analysis-grid {
+    gap: 0;
+  }
+}

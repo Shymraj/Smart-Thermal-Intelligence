@@ -1,0 +1,587 @@
+
+.diagnostics-page {
+  width: 100%;
+  padding: 28px;
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.diag-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.diag-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  letter-spacing: 1.7px;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.diag-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.diag-page-header h1 {
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  color: #f8fafc;
+  margin: 0 0 10px;
+}
+
+.diag-page-header p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0;
+}
+
+.diag-header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.diag-header-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.diag-run-btn {
+  background: #16a34a;
+  border: 1px solid #16a34a;
+  color: white;
+}
+
+.diag-run-btn:hover {
+  background: #15803d;
+}
+
+.diag-reset-btn {
+  background: #111827;
+  color: #cbd5e1;
+  border: 1px solid #273449;
+}
+
+.diag-reset-btn:hover {
+  background: #1e293b;
+}
+
+.diag-header-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* DEVICE STRIP */
+
+.diag-device-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  background: #101827;
+  border: 1px solid #263347;
+  border-radius: 15px;
+  padding: 19px;
+}
+
+.diag-device {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.diag-device-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #172437;
+  color: #60a5fa;
+  flex-shrink: 0;
+}
+
+.diag-device div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.diag-device span {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.diag-device strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+  word-break: break-word;
+}
+
+.diag-device .diag-offline {
+  color: #f87171;
+}
+
+/* STAT CARDS */
+
+.diag-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.diag-stat-card {
+  background: #101827;
+  border: 1px solid #263347;
+  border-radius: 15px;
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+
+.diag-stat-card:hover {
+  border-color: #3b516b;
+}
+
+.diag-stat-top {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.diag-stat-icon {
+  width: 37px;
+  height: 37px;
+  border-radius: 10px;
+  background: #172437;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60a5fa;
+}
+
+.diag-stat-label {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.diag-stat-card h3 {
+  font-size: 28px;
+  color: #f8fafc;
+  font-weight: 700;
+  margin: 18px 0 7px;
+}
+
+.diag-stat-card p {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* PANELS */
+
+.diag-panel {
+  background: #101827;
+  border: 1px solid #263347;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.diag-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 22px;
+  border-bottom: 1px solid #243145;
+}
+
+.diag-panel-header h2 {
+  color: #f1f5f9;
+  font-size: 17px;
+  font-weight: 650;
+  margin: 0 0 7px;
+}
+
+.diag-panel-header p {
+  color: #94a3b8;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.diag-demo-badge {
+  padding: 6px 10px;
+  border: 1px solid #475569;
+  background: #172437;
+  color: #93c5fd;
+  border-radius: 7px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* CHECK LIST */
+
+.diag-check-list {
+  padding: 4px 22px;
+}
+
+.diag-check-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+.diag-check-row:last-child {
+  border-bottom: none;
+}
+
+.diag-check-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: #172437;
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.diag-check-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.diag-check-info h4 {
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 5px;
+}
+
+.diag-check-info p {
+  color: #94a3b8;
+  font-size: 12px;
+  margin: 0 0 6px;
+}
+
+.diag-check-detail {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.diag-check-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.diag-check-status.pending {
+  background: #172437;
+  color: #93c5fd;
+  border: 1px solid #30445c;
+}
+
+.diag-check-status.pass {
+  background: rgba(22, 163, 74, 0.12);
+  color: #4ade80;
+  border: 1px solid rgba(22, 163, 74, 0.3);
+}
+
+.diag-check-status.fail {
+  background: rgba(220, 38, 38, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.diag-running-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 22px;
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.08);
+  border-bottom: 1px solid #243145;
+  font-size: 13px;
+}
+
+/* COMMUNICATION */
+
+.diag-communication-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 22px;
+  gap: 14px;
+}
+
+.diag-communication-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #131f30;
+  border: 1px solid #263347;
+  border-radius: 12px;
+  padding: 17px;
+  color: #60a5fa;
+  min-width: 0;
+}
+
+.diag-communication-item > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.diag-communication-item > div span {
+  display: block;
+  color: #94a3b8;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+.diag-communication-item > div strong {
+  color: #e2e8f0;
+  font-size: 13px;
+  display: block;
+  word-break: break-word;
+}
+
+.diag-neutral-status,
+.diag-failed-status {
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 7px;
+  padding: 6px 8px;
+  flex-shrink: 0;
+}
+
+.diag-neutral-status {
+  background: #172437;
+  color: #93c5fd;
+}
+
+.diag-failed-status {
+  background: rgba(220, 38, 38, 0.1);
+  color: #f87171;
+}
+
+/* CALIBRATION */
+
+.diag-calibration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 22px;
+  gap: 15px;
+}
+
+.diag-calibration-item {
+  background: #131f30;
+  border: 1px solid #263347;
+  border-radius: 12px;
+  padding: 19px;
+}
+
+.diag-calibration-label {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.diag-calibration-item h3 {
+  color: #e2e8f0;
+  font-size: 17px;
+  margin: 13px 0 9px;
+  font-weight: 650;
+}
+
+.diag-calibration-item p {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* NOTICE */
+
+.diag-prototype-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 19px;
+  background: #171f2d;
+  border: 1px solid #3b4556;
+  border-radius: 13px;
+  color: #fbbf24;
+}
+
+.diag-prototype-notice > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.diag-prototype-notice strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 7px;
+  color: #e2e8f0;
+}
+
+.diag-prototype-notice p {
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ANIMATION */
+
+.diag-spin {
+  animation: diag-spin-animation 1s linear infinite;
+}
+
+@keyframes diag-spin-animation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .diag-device-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .diag-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .diagnostics-page {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .diag-page-header {
+    flex-direction: column;
+  }
+
+  .diag-page-header h1 {
+    font-size: 24px;
+  }
+
+  .diag-header-actions {
+    width: 100%;
+  }
+
+  .diag-header-actions button {
+    flex: 1;
+  }
+
+  .diag-device-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .diag-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .diag-stat-card {
+    padding: 16px;
+  }
+
+  .diag-stat-card h3 {
+    font-size: 23px;
+  }
+
+  .diag-panel-header {
+    padding: 17px;
+  }
+
+  .diag-check-list {
+    padding: 4px 17px;
+  }
+
+  .diag-check-row {
+    gap: 10px;
+  }
+
+  .diag-check-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .diag-check-status {
+    padding: 6px 8px;
+  }
+
+  .diag-communication-grid {
+    grid-template-columns: 1fr;
+    padding: 17px;
+  }
+
+  .diag-calibration-grid {
+    grid-template-columns: 1fr;
+    padding: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .diag-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diag-check-row {
+    flex-wrap: wrap;
+  }
+
+  .diag-check-info {
+    flex-basis: calc(100% - 55px);
+  }
+
+  .diag-check-status {
+    margin-left: 48px;
+  }
+
+  .diag-communication-item {
+    flex-wrap: wrap;
+  }
+
+  .diag-prototype-notice {
+    padding: 15px;
+  }
+}
